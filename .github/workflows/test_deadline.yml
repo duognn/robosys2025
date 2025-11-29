@@ -1,21 +1,23 @@
-name: Deadline Sorter Test
+name: Test deadline_sorter
 
-on: 
+on:
   push:
-    branches:
-      - main
   pull_request:
 
 jobs:
-  test:
+  run-tests:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up bash
-        run: sudo apt-get update && sudo apt-get install -y bash
+      - name: Make scripts executable
+        run: |
+          chmod +x deadline_sorter.sh
+          chmod +x test_deadline.bash
 
-      - name: Run tests
-        run: bash -xv ./test_deadline.bash
+      - name: Run test
+        run: |
+          bash -xv ./test_deadline.bash
 
