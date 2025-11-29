@@ -1,0 +1,25 @@
+#!/bin/bash
+# deadline_tool: sort deadlines and show days remaining
+
+mapfile -t deadlines
+
+# Debug: print the deadlines
+echo "=== DEBUG: Deadlines read ==="
+for line in "${deadlines[@]}"; do
+    echo "$line"
+done
+echo "============================="
+
+
+ng () {
+    echo "Error at line $1" >&2
+    exit 1
+}
+
+res=0
+
+lines=()
+while IFS= read -r line; do
+    lines+=("$line")
+done
+
