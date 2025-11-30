@@ -1,9 +1,8 @@
-#!/bin/bash -xv
+#!/bin/bash 
 # SPDX-FileCopyrightText: 2025 DUONG HUYEN
 # SPDX-License-Identifier: GPL-3.0-only
 
 today=$(date +%Y-%m-%d)
-echo "Today is $today"
 
 # Read all lines from stdin into an array
 mapfile -t deadlines < <(grep -v '^$')
@@ -23,11 +22,10 @@ for line in "${deadlines[@]}"; do
 done
 
 # Sort deadlines by date (assuming each line starts with YYYY-MM-DD)
-sorted_deadlines=$(printf "%s\n" "${deadlines[@]}" | sort -k2 -n)
+sorted_deadlines=$(printf "%s\n" "${deadlines[@]}" | sort -k2)
 
 # Print sorted deadlines with days left
-echo "=== Sorted Deadlines ==="
-while read line; do
+while read -r line; do
     task=$(echo "$line" | awk '{print $1}')
     dline=$(echo "$line" | awk '{print $2}')
     

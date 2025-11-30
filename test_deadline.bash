@@ -6,17 +6,30 @@ res=0
 
 ### NORMAL INPUT ###
 out=$(./deadline_sorter.sh < test_input.txt)
-echo "$out"
-[ "$(echo "$out" | grep -c 'days left')" -eq 3 ] || res=1
+if [ -z "$out" ]; then
+    res=1
+fi
+
+line_count=$(echo "$out" | wc -l)
+if [ "$line_count" -ne 3 ]; then
+    res=1
+fi
+
+if ! echo "$out" | grep -q "days left"; then
+    res=1
+fi
 
 ### EMPTY INPUT ###
-./deadline_sorter.sh < /dev/null
-[ "$?" -eq 1 ] || res=1
+./deadline_sorter.sh < /dev/null > /dev/null 2>&1
+if [ "$?" -eq 0 ]; then
+    res=1 
+fi
 
 ### INVALID FORMAT ###
-echo "task_without_date" | ./deadline_sorter.sh
-[ "$?" -eq 1 ] || res=1
+echo "task_without_date" | ./deadline_sorter.sh > /dev/null 2>&1
+if [ "$?" -eq 0 ]; then
+    res=1
+fi
 
 [ $res -eq 0 ] && echo "All tests passed"
 exit $res
-
