@@ -39,7 +39,7 @@ $ ./test_deadline.bash
 
 🔁 GitHub Actions (CI)
 
-$ .github/workflows/test_deadline.yml により、GitHub 上で自動的にテストが実行されます。
+ .github/workflows/test_deadline.yml により、GitHub 上で自動的にテストが実行されます。
 
 Push または Pull Request を行うと、自動で以下が確認されます：
 
