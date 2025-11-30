@@ -5,10 +5,10 @@
 標準入力から課題名と締切日を読み取り、今日の日付との差を計算して残り日数の順にソートして表示するプログラムです。
 
 🔧 使用方法（Usage）
-実行方法
-./deadline_sorter.sh < input.txt
+実行方法:
+$ ./deadline_sorter.sh < input.txt
 
-入力形式
+入力形式:
 
 入力は以下の形式で、1 行につき「課題名」+「半角スペース」+「YYYY-MM-DD」の日付：
 
@@ -16,7 +16,7 @@
 課題2 2025-11-30
 課題3 2025-12-10
 
-出力例
+出力例:
 Today is 2025-11-30
 課題2: 0 days left
 課題1: 1 days left
@@ -26,8 +26,8 @@ Today is 2025-11-30
 
 本リポジトリには動作確認用スクリプトが含まれています。
 
-テスト実行方法
-./test_deadline.bash
+テスト実行方法:
+$ ./test_deadline.bash
 
 
 テスト内容：
@@ -39,7 +39,7 @@ Today is 2025-11-30
 
 🔁 GitHub Actions (CI)
 
-.github/workflows/test_deadline.yml により、GitHub 上で自動的にテストが実行されます。
+$ .github/workflows/test_deadline.yml により、GitHub 上で自動的にテストが実行されます。
 
 Push または Pull Request を行うと、自動で以下が確認されます：
 
