@@ -30,7 +30,7 @@ chmod +x deadline_sorter.sh
 **入力形式 (Input Format):**
 `TaskName YYYY-MM-DD` (Space separated)
 
-**例 (Example `input.txt`):**
+**例 (Example `test_input.txt`):**
 
 ```text
 課題1 2025-12-01
@@ -41,7 +41,7 @@ chmod +x deadline_sorter.sh
 **実行コマンド (Command):**
 
 ```bash
-cat input.txt | ./deadline_sorter.sh
+cat test_input.txt | ./deadline_sorter.sh
 ```
 
 **出力結果 (Output):**
