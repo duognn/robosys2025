@@ -59,11 +59,16 @@ test_deadline.bash のテストが通るか
 
 このリポジトリは GNU General Public License v3.0 のもとで公開されています。
 詳細は COPYING を参照してください。
+© 2025 DUONG HUYEN
 
-👤 作者（Author）
+### 外部コードの使用 (External Code Usage)
+
+このパッケージは、標準的な Unix/Linux コマンド（例：`date`, `sort`, `awk`）のみを使用しており、外部のライブラリや第三者のコードは利用していません。
+
+👤 作者（Author):
 24C1069
 DUONG HUYEN (ズオン フエン)
 千葉工業大学 未来ロボティクス学科
 
-🚀 メモ
+🚀 メモ:
 この README は作成されたプロジェクト内容にもとづき、ロボットシステム学のレポート形式に合わせて構成されています。
