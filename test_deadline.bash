@@ -1,4 +1,6 @@
-#!/bin/bash -xv
+#!/usr/bin/python3 -xv
+# SPDX-FileCopyrightText: 2025 DUONG HUYEN
+# SPDX-License-Identifier: GPL-3.0-only 
 
 res=0
 
