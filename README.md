@@ -1,7 +1,9 @@
 # Deadline Sorter
 
 標準入力から課題名と締切日を読み取り、今日の日付との差を計算して残り日数の順にソートして表示するコマンドラインツールです。
-(A command-line tool that reads task names and deadlines from standard input, calculates the remaining days, and outputs them sorted by deadline.)
+課題の締切管理だけでなく、誕生日やクリスマス、お正月などのイベントへのカウントダウンにも活用できます。
+
+(A command-line tool that reads task names and deadlines from standard input, calculates the remaining days, and outputs them sorted by deadline. It can be used not only for homework deadlines but also for counting down to events like birthdays, Christmas, or New Year.)
 
 ## 動作環境 (Requirement)
 * Linux environment (Ubuntu, etc.)
@@ -11,7 +13,7 @@
 
 ### 1. リポジトリをクローン (Clone the repository)
 ```bash
-git clone [https://github.com/duognn/robosys2025.git](https://github.com/duognn/robosys2025.git)
+git clone https://github.com/duognn/robosys2025.git
 cd robosys2025
 ````
 
@@ -31,9 +33,9 @@ chmod +x deadline_sorter.sh
 **例 (Example `input.txt`):**
 
 ```text
-Math_HW 2025-12-01
-Physics_Report 2025-11-30
-Coding_Project 2025-12-10
+課題1 2025-12-01
+課題2 2025-11-30
+課題3 2025-12-10
 ```
 
 **実行コマンド (Command):**
@@ -47,9 +49,9 @@ cat input.txt | ./deadline_sorter.sh
 (Calculated based on today's date.)
 
 ```text
-Physics_Report 2025-11-30 (0 days left)
-Math_HW 2025-12-01 (1 days left)
-Coding_Project 2025-12-10 (10 days left)
+課題2 2025-11-30 (0 days left)
+課題1 2025-12-01 (1 days left)
+課題3 2025-12-10 (10 days left)
 ```
 
 ## テスト (Test)
