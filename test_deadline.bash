@@ -5,7 +5,7 @@
 res=0
 
 ### NORMAL INPUT ###
-out=$(./deadline_sorter.sh < test_input.txt)
+out=$(./deadline_sorter < test_input.txt)
 if [ -z "$out" ]; then
     res=1
 fi
@@ -20,13 +20,13 @@ if ! echo "$out" | grep -q "days left"; then
 fi
 
 ### EMPTY INPUT ###
-./deadline_sorter.sh < /dev/null > /dev/null 2>&1
+./deadline_sorter < /dev/null > /dev/null 2>&1
 if [ "$?" -eq 0 ]; then
     res=1 
 fi
 
 ### INVALID FORMAT ###
-echo "task_without_date" | ./deadline_sorter.sh > /dev/null 2>&1
+echo "task_without_date" | ./deadline_sorter > /dev/null 2>&1
 if [ "$?" -eq 0 ]; then
     res=1
 fi

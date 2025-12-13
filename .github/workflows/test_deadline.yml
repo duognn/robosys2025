@@ -3,7 +3,7 @@ name: Deadline Sorter Test
 on:
   push:
     paths:
-      - 'deadline_sorter.sh'
+      - 'deadline_sorter'
       - 'test_deadline.bash'
       - 'test_input.txt'
       - '.github/workflows/test_deadline.yml'
@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Make scripts executable
-        run: chmod +x deadline_sorter.sh test_deadline.bash
+        run: chmod +x deadline_sorter test_deadline.bash
 
       - name: Run deadline sorter tests
         run: bash -xv ./test_deadline.bash
