@@ -23,7 +23,6 @@ cat test_input.txt | ./deadline_sorter
 ## 入出力例 (Example)
 
 ```text
-
 $ cat test_input.txt
 課題1 2025-12-01
 課題2 2025-11-30
@@ -33,7 +32,6 @@ $ cat test_input.txt | ./deadline_sorter
 課題2 2025-11-30 (0 days left)
 課題1 2025-12-01 (1 days left)
 課題3 2025-12-10 (10 days left)
-
 ```
 ## ライセンス (License)
 
