@@ -20,8 +20,7 @@ chmod +x deadline_sorter
 cat test_input.txt | ./deadline_sorter
 ```
 
-```markdown
-## Example
+## 入出力例 (Example)
 
 ```text
 
